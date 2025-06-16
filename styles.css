@@ -1,0 +1,86 @@
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background: linear-gradient(135deg, #1a3c34, #2d6a4f);
+  color: #e5e7eb;
+}
+
+.dark-mode header, .dark-mode footer {
+  background: #1a3c34;
+}
+
+.dark-mode section {
+  background: #2d6a4f;
+}
+
+.dark-mode .bg-white {
+  background: #2d6a4f;
+}
+
+.dark-mode .text-gray-800 {
+  color: #e5e7eb;
+}
+
+.dark-mode .text-gray-700 {
+  color: #d1d5db;
+}
+
+.toggle-mode {
+  transition: background-color 0.3s;
+}
+
+.dark-mode .toggle-mode {
+  background: #4b5563;
+}
+
+.progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+.tip-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.tip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tip-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 50px;
+  height: 50px;
+  background: url('https://img.icons8.com/ios-filled/50/ffffff/leaf.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.1;
+  animation: leaf-float 10s infinite linear;
+}
+
+@keyframes leaf-float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(200px, 200px) rotate(360deg); }
+}
+
+.loading::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

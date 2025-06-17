@@ -12,7 +12,7 @@ let currentFootprint = 0;
 let goal = parseFloat(localStorage.getItem('goal')) || 100;
 let chart;
 
-// Eco-tips data
+
 const ecoTips = [
   { title: 'Reduce Car Usage', description: 'Use public transit, bike, or walk to cut transport emissions.' },
   { title: 'Eat Plant-Based', description: 'Reduce meat consumption to lower your food footprint.' },
